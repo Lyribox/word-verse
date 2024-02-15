@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordverse</title>
+    <link rel="stylesheet" href="/CSS/friends.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <%- include('partials/imports/boxicons') %>
+    <%- include('partials/imports/favicon-default') %>
+    <%- include('partials/navbar/navbarCSS', {props: props}) %>
+    <%- include('partials/popup/popupCSS') %>
+</head>
+<body>
+    <%- include('partials/navbar/navbar', {props: props}) %>
+    <%- include('partials/popup/popup') %>
+
+    <video autoplay muted loop>
+        <source src="/images/friends.mp4" type="video/mp4">
+    </video>
+
+    <h1 class="label-box">Add Friends!</h1>
+    <div class="friend-search">
+        <div class="friend-search-bar">
+            <label class="label-box" for="friend">Type in a username: </label>
+            <input name="friend" type="text" id="friend-search-input">
+            <button id="friend-search-submit"><i class="fa fa-search"></i></button>
+        </div>
+        <div class="friend-search-target">
+            <div class="profile-container">
+                <div class="profile-container" style="justify-content: center; padding: 2rem">Make a search!</div>
+            </div>
+        </div>
+    </div>
+    <!-- JS -->
+    <%- include('partials/imports/jquery', {options: ["ui"]}) %>
+    <%- include('partials/navbar/navbarJS') %>
+    <%- include('partials/popup/popupJS') %>
+    <script src="/JS/friends.js" async defer></script>
+</body>
+</html>

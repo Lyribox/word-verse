@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordverse</title>
+    <%- include('partials/imports/boxicons') %>
+    <%- include('partials/imports/favicon-default') %>
+    <%- include('partials/navbar/navbarCSS', {props: props}) %>
+    <%- include('partials/cards/cardCSS') %>
+    <%- include('partials/popup/popupCSS') %>
+    <link rel="stylesheet" href="/CSS/collection.css">
+</head>
+<body>
+    <%- include('partials/navbar/navbar', {props: props}) %>
+    <%- include('partials/popup/popup') %>
+
+    <video autoplay muted loop>
+        <source src="/images/collection.mp4" type="video/mp4">
+    </video>
+
+    <div class="collection-container">
+        <% for( let i = 0; i < props.flashcards.length; i++ ) { %>
+            <div class="collection-item">
+                <%- include('partials/cards/card', { card : props.flashcards[i], topCard : true }) %>
+                <div data-id="<%= props.flashcards[i]._id %>" class="card-buttons">
+                    <i class="bx bxs-trash card-delete" onclick="cardDelete(this)"></i>
+                </div>
+            </div>
+        <% } %>
+    </div>
+    
+    <%- include('partials/imports/jquery', {options: ["ui"]}) %>
+    <%- include('partials/navbar/navbarJS', {props: props}) %>
+    <%- include('partials/cards/cardJS') %>
+    <%- include('partials/popup/popupJS') %>
+    <script src="JS/collection.js" async defer></script>
+</body>
+</html>

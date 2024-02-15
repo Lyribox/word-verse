@@ -1,0 +1,96 @@
+/* Video from https://moewalls.com/lifestyle/traditional-chinese-house-cherry-blossom-live-wallpaper/*/
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.inbox-container{
+    margin: 2rem;
+    height: 100vh;
+}
+.inbox-sub-container{
+    height: 100%;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.inbox-item-container{
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    padding: 1rem;
+    height: 100%;
+    width: 100%;
+}
+.inbox-item{
+    position: relative;
+    margin-right: 1rem;
+}
+.card-buttons{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+.card-buttons i{
+    font-size: 2rem;
+    cursor: pointer;
+}
+#inbox-incoming-container{
+    display: none;
+}
+#inbox-send-container{
+    display: flex;
+}
+.friend-select-container{
+    width: 100%;
+}
+.card-send:hover{
+    color: rgb(85, 124, 192);
+}
+.card-reject:hover{
+    color: rgb(192, 85, 85);
+}
+.card-accept:hover{
+    color: rgb(85, 192, 128);
+}
+.sender-container{
+    position: absolute;
+    bottom: -0.5rem;
+    right: 0;
+    z-index: 100;
+    border-radius: 9999px;
+    border: 1px solid black;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+.sender-container .username{
+    font-weight: bold;
+}
+
+.friend-select-container {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 5px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    color: white;
+}
+
+.inbox-button-group {
+    display: grid;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 5px;
+}
